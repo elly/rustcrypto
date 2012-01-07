@@ -162,6 +162,6 @@ fn main() {
     let h = mk_hasher(sha512);
     h.init();
     h.update(str::bytes(""));
-    log h.final();
-    log hash(sha512, str::bytes(""));
+    log(info, h.final());
+    log(info, hash(sha512, str::bytes("")));
 }
